@@ -1,0 +1,279 @@
+libcommon-sense-perl (3.75-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + libcommon-sense-perl: Add Multi-Arch: same.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ gregor herrmann ]
+  * Fix FTCBFS: Set ARCHLIB for the host architecture.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.6.0.
+  * Drop override for removed lintian tag.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 05 Nov 2021 18:11:11 +0100
+
+libcommon-sense-perl (3.75-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/*: update URLs from {search,www}.cpan.org to MetaCPAN.
+
+  [ Xavier Guimard ]
+  * Email change: Xavier Guimard -> yadd@debian.org
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * debian/control: update Build-Depends for cross builds.
+  * debian/watch: use uscan version 4.
+  * Import upstream version 3.75.
+  * Drop reproducible_build.patch, applied upstream.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: binary-targets.
+    The recreation of the manpage in debian/rules needs (fake)root.
+  * Add debian/tests/pkg-perl/use-name to enable autopkgtest's use.t.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 04 Apr 2020 16:21:24 +0200
+
+libcommon-sense-perl (3.74-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Change bugtracker URL(s) to HTTPS.
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+  * debian/rules: add --name parameter to pod2man call.
+    Thanks to Anthony DeRobertis for the bug report. (Closes: #839793)
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 05 Oct 2016 16:38:37 +0200
+
+libcommon-sense-perl (3.74-1) unstable; urgency=medium
+
+  * Team upload.
+  * Add debian/upstream/metadata
+  * Imported Upstream version 3.74
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Wed, 19 Aug 2015 12:21:29 -0300
+
+libcommon-sense-perl (3.73-3) unstable; urgency=medium
+
+  * Add CPAN RT ticket to pod-encoding.patch.
+  * Add patch to make build reproducible.
+    Thanks to Chris Lamb for the bug report and patch. (Closes: #778952)
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 May 2015 21:19:48 +0200
+
+libcommon-sense-perl (3.73-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Drop manual generation of perlapi-* dependency, use debhelper
+    9.20140809 instead.
+  * Update lintian override to multi-arch directories.
+  * Update years of packaging copyright.
+  * Add Testsuite: autopkgtest-pkg-perl to debian/control.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 20 Sep 2014 03:05:16 +0200
+
+libcommon-sense-perl (3.73-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add perlapi-* to Depends (cf. #750017).
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 05 Jun 2014 19:26:24 +0200
+
+libcommon-sense-perl (3.72-5) unstable; urgency=medium
+
+  * Team upload.
+  * Slightly loosen the dependency on the current perl version
+    to allow for release candidates (of the form 5.20.0~rc1).
+
+ -- Niko Tyni <ntyni@debian.org>  Sun, 18 May 2014 12:07:25 +0300
+
+libcommon-sense-perl (3.72-4) unstable; urgency=medium
+
+  * Team upload
+
+  * fix man-ification of sense.pod with multiarch-enabled perl
+
+ -- Damyan Ivanov <dmn@debian.org>  Thu, 15 May 2014 17:05:19 +0300
+
+libcommon-sense-perl (3.72-3) unstable; urgency=medium
+
+  * Team upload.
+  * Bump debhelper compat level to 9.
+  * Reformat debian/control with cme fix dpkg.
+  * Declare compatibility with Standards-Version 3.9.5.
+
+ -- intrigeri <intrigeri@debian.org>  Sun, 09 Mar 2014 02:25:47 +0100
+
+libcommon-sense-perl (3.72-2) unstable; urgency=low
+
+  * Team upload
+
+  [ Axel Beckert ]
+  * debian/copyright: Replace X-Email with Comment
+
+  [ gregor herrmann ]
+  * Ensure a runtime dependency on the same perl version used at build
+    time. This also adds an upper bound, as opposed to the last upload,
+    and should help to avoid failures like the one described in #722332.
+    Thanks to Hagen Fuchs for the bug report. (Closes: #722332)
+  * Add a source lintian override for a pkg-perl specific lintian
+    debhelper test.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 11 Sep 2013 12:08:47 +0200
+
+libcommon-sense-perl (3.72-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+
+  [ Xavier Guimard ]
+  * Update debian/copyright years
+  * Bump Standards-Version to 3.9.4
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * debian/watch: add uversionmangle to ensure 2-digit minor versions.
+  * debian/rules: recreate manpage from now separate POD file.
+  * Add patch to add encoding to POD/manpage. Thanks to Jakub Wilk for the
+    bug report. (Closes: #699520)
+  * Ensure a runtime dependency on the same Perl patchlevel used during
+    build. Depending on Perl version used for building, different features
+    are activated.
+  * Update years of packaging copyright.
+  * Make package arch:any, following upstream's change. Add a lintian
+    override for the seemingly harmless file.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 09 Aug 2013 21:00:58 +0200
+
+libcommon-sense-perl (3.6-1) unstable; urgency=low
+
+  * Team upload.
+  * Imported Upstream version 3.6
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 17 Jun 2012 17:46:58 +0200
+
+libcommon-sense-perl (3.5-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Angel Abad ]
+  * Email change: Angel Abad -> angel@debian.org
+
+  [ Salvatore Bonaccorso ]
+  * Imported Upstream version 3.5
+  * Update format for debian/copyright file.
+    Update format to copyright-format 1.0 as released together with Debian
+    policy 3.9.3.
+  * Bump Standards-Version to 3.9.3
+  * Bump Debhelper compat level to 8.
+    Adjust versioned Build-Depends on debhelper to (>= 8).
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 25 Mar 2012 09:44:08 +0200
+
+libcommon-sense-perl (3.4-1) unstable; urgency=low
+
+  [ Angel Abad ]
+  * New upstream release
+  * debian/copyright:
+    - Update license stanzas
+    - Add Files to upstream section
+  * Bump Standards-Version to 3.9.1 (no changes)
+
+  [ Ansgar Burchardt ]
+  * Update my email address.
+
+ -- Angel Abad <angelabad@gmail.com>  Fri, 14 Jan 2011 12:08:06 +0100
+
+libcommon-sense-perl (3.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: Formatting changes for current DEP-5 proposal.
+  * Bump Standards-Version to 3.9.0 (no changes).
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sat, 03 Jul 2010 20:36:52 +0900
+
+libcommon-sense-perl (3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patch spelling.patch, applied upstream.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 Apr 2010 21:25:27 +0200
+
+libcommon-sense-perl (3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: No longer mangle upstream version.
+  * Bump Standards-Version to 3.8.4.
+  * Add myself to Uploaders.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sat, 03 Apr 2010 20:22:44 +0900
+
+libcommon-sense-perl (3.00-1) unstable; urgency=low
+
+  [ Angel Abad ]
+  * New upstream release
+
+  [ gregor herrmann ]
+  * debian/watch: add uversionmangle to deal with one- and two-digit minor
+    versions.
+
+ -- Angel Abad <angelabad@gmail.com>  Tue, 15 Dec 2009 11:58:07 +0100
+
+libcommon-sense-perl (2.03-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Add myself to Uploaders and Copyright
+
+  [ Angel Abad ]
+  * Update my email address
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Wed, 02 Dec 2009 18:04:50 -0500
+
+libcommon-sense-perl (2.01-1) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * Update ryan52's email address
+
+  [ Angel Abad (Ikusnet SLL) ]
+  * New upstream release
+  * Add myself to Uploaders
+
+ -- Angel Abad (Ikusnet SLL) <angel@grupoikusnet.com>  Tue, 06 Oct 2009 11:27:47 +0200
+
+libcommon-sense-perl (2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Tue, 01 Sep 2009 13:10:31 -0700
+
+libcommon-sense-perl (1.0-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #542516)
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sun, 23 Aug 2009 14:04:29 -0700

@@ -1,0 +1,28 @@
+Source: libcommon-sense-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Angel Abad <angel@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Xavier Guimard <yadd@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcommon-sense-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcommon-sense-perl.git
+Homepage: https://metacpan.org/release/common-sense
+Rules-Requires-Root: binary-targets
+
+Package: libcommon-sense-perl
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${sameperl:Depends}
+Description: module that implements some sane defaults for Perl programs
+ common::sense implements some sane defaults for Perl programs, as defined by
+ two typical (or not so typical - use your common sense) specimens of Perl
+ coders.
